@@ -5,7 +5,7 @@ import Header from './header'
 
 const Layout = () => {
   return (
-    <div>
+    <div className='relative group'>
       <Header/>
       <Outlet/>
       <Footer/>

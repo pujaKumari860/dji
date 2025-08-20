@@ -1,30 +1,33 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router'
-import Layout from './components/layout'
-import About from "./components/about/about"
-import Home from './components/home/home'
+import React, { useEffect } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Layout from "./components/layout";
+import About from "./components/about/about";
+import Home from "./components/home/home";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
-const appRouter = createBrowserRouter([{
-  path:"/",
-  element: <Layout/>,
-  children:[
-    {
-    path:"/",
-    element:<Home/>
-  },
+const appRouter = createBrowserRouter([
   {
-    path:"/about",
-    element: <About/>
-  }
-]
-}])
-
-
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <RouterProvider router={appRouter} />
-  )
-}
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  return <RouterProvider router={appRouter} />;
+};
 
-export default App
+export default App;

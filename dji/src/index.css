@@ -9,3 +9,33 @@ a{
 a:hover{
     transition: all 0.5s ease;
 }
+.hero-slider .slick-dots{
+bottom: 40px;
+}
+.hero-slider .slick-dots li.slick-active button:before{
+background: #fff;
+border-radius: 50px;
+height: 5px;
+}
+.hero-slider .slick-dots li button:before {
+height: 5px;
+width: 80px;
+background: #6d6d6d;
+font-family: none;
+border-radius: 50px;
+
+}
+.hero-slider .slick-dots li button {
+height: 5px;
+width: 80px;
+background: #6d6d6d;
+padding: 0;
+border-radius: 50px;
+}
+.hero-slider .slick-dots li {
+height: 5px;
+width: 80px;
+background: #6d6d6d;
+border-radius: 50px;
+margin: 0 10px;
+}
