@@ -25,7 +25,8 @@ const appRouter = createBrowserRouter([
 
 const App = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({  duration: 800, 
+    once: false,    });
   }, []);
   return <RouterProvider router={appRouter} />;
 };
