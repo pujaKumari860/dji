@@ -21,6 +21,7 @@ const slides = [
 ];
 
 // src/data/homepageProductsData.js
+export
  const homeProductsData = [
   {
     img: "images/min-bann1.jpg",
